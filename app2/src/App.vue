@@ -1,6 +1,6 @@
 <template>
   <div :id="root">
-    <h1>base 应用</h1>
+    <h1>app2 应用</h1>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <style>
-#base {
+#app2 {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

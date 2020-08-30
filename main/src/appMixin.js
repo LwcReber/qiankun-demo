@@ -3,10 +3,10 @@ import {
   start
 } from 'qiankun'
 import {
-  baseApp
-  // apps
+  baseApp,
+  apps
 } from '@/router/router.config'
-const allApps = [baseApp]
+const allApps = [baseApp, ...apps]
 console.log(baseApp)
 
 export default {

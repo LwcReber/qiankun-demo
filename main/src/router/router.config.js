@@ -10,10 +10,10 @@ const baseApp = {
 }
 const apps = [
   {
-    name: 'app1',
+    name: 'app2',
     entry: '//localhost:8086',
     container: '#subapp',
-    activeRule: activeRule('/app1')
+    activeRule: activeRule('/app2')
   }
 ]
 module.exports = {

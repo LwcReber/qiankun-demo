@@ -47,10 +47,8 @@ routes.map((route) => {
   if (route.path === '/') return
   allRoutes.push(route.path)
 })
-console.log(allRoutes)
 
 const handle404 = (path) => {
-  console.log(path)
   for (let index = 0; index < allRoutes.length; index++) {
     const route = allRoutes[index]
     if (path.startsWith(route)) {

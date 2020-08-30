@@ -1,4 +1,4 @@
-import './public-path' // 子应用必须引入的文件
+import './public-path'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -6,6 +6,7 @@ import App from './App.vue'
 import routes from './router'
 import store from './store'
 const APPNAME = process.env.VUE_APP_NAME
+
 Vue.config.productionTip = false
 
 // new Vue({
