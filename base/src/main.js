@@ -1,7 +1,5 @@
 import './public-path' // 子应用必须引入的文件
-if (!Vue) {
-  import Vue from 'vue'
-}
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import routes from './router'
