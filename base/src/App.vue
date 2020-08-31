@@ -1,6 +1,9 @@
 <template>
   <div :id="root">
     <h1>base 应用</h1>
+    <test class="base-test">在子应用上使用到主应用组件</test>
+    <button @click="handleClick">点击调用主应用的函数</button>
+    <div>应用间的共享数据{{mainLang}}</div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -14,16 +17,33 @@ export default {
     return {
       root: process.env.VUE_APP_NAME
     }
+  },
+  computed: {
+    mainLang () {
+      return this.$store.state.lang
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$mainUtils.testMain()
+    }
   }
 }
 </script>
-<style>
+<style lang="stylus" scoped>
 #base {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.base-test {
+  position fixed
+  left: 0
+  bottom: 60px
+  width 200px
+  text-align left
 }
 
 #nav {

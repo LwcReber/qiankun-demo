@@ -1,5 +1,6 @@
 <template>
   <div id="main">
+    <test key="main" class="test"></test>
     <Header class="header-container"></Header>
     <div id="subapp"></div>
     <router-view />
@@ -8,18 +9,26 @@
 <script>
 import Header from '@/components/Header'
 import mixin from './appMixin'
+import test from '@/components/test'
 export default {
   mixins: [mixin],
-  components: { Header }
+  components: { Header, test }
 }
 </script>
-<style>
+<style lang="stylus" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.test {
+  position: fixed;
+  right: 0;
+  bottom: 60px
+  width 200px
+  text-align right
 }
 #subapp {
   padding-top: 40px;
